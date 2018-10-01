@@ -16,6 +16,12 @@ __license__ = "MIT"
 
 # DevNet Always-On NETCONF/YANG & RESTCONF Sandbox Device
 # https://devnetsandbox.cisco.com/RM/Diagram/Index/27d9747a-db48-4565-8d44-df318fce37ad?diagramType=Topology
+ios_xe0 = {
+             "address": "sbx-nxos-mgmt.cisco.com",
+             "port": 10000,
+             "username": "admin",
+             "password": "Admin_1234!"
+          }
 ios_xe1 = {
              "address": "ios-xe-mgmt.cisco.com",
              "port": 10000,
