@@ -7,12 +7,17 @@ from pprint import pprint
 
 readyaml = open("yaml_example.yaml").read()
 
-#pprint(readjson)
 
-yaml_py = yaml.load(readyaml)
+
+yaml_py = yaml.load(readyaml,yaml.SafeLoader)
 interface_name = yaml_py["ietf-interfaces:interface"]["name"]
 
-pprint(interface_name)
+#pprint(interface_name)
 
-yaml.dump(yaml_py)
+address = yaml_py["ietf-interfaces:interface"]["ietf-ip:ipv4"]["address"]
+
+for addr in address:
+	pprint(addr["ip"])
+
+#yaml.dump(yaml_py)
 
